@@ -1,0 +1,59 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <TargetFramework>net8.0</TargetFramework>
+        <Nullable>enable</Nullable>
+        <ImplicitUsings>enable</ImplicitUsings>
+        <RootNamespace>BooksMS</RootNamespace>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.33">
+            <PrivateAssets>all</PrivateAssets>
+            <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+        </PackageReference>
+        <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
+        <PackageReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Design" Version="8.0.23" />
+        <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.31" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Books.APP\Books.APP.csproj" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Compile Remove="Templates\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <EmbeddedResource Remove="Templates\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Content Remove="Templates\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Remove="Templates\**" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <_ContentIncludedByDefault Remove="Templates\ControllerGenerator\ApiControllerWithContext.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ControllerGenerator\MvcControllerWithContext.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ViewGenerator\Create.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ViewGenerator\Delete.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ViewGenerator\Details.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ViewGenerator\Edit.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ViewGenerator\Empty.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ViewGenerator\List.cshtml" />
+      <_ContentIncludedByDefault Remove="Templates\ViewGenerator\_ValidationScriptsPartial.cshtml" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <Compile Remove="Templates\**" />
+        <Content Remove="Templates\**" />
+        <EmbeddedResource Remove="Templates\**" />
+        <None Remove="Templates\**" />
+    </ItemGroup>
+
+</Project>
